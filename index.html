@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Simple HTML, JS, CSS e-commerce website</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="hamburger-menu">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+      </div>
+      <ul class="nav-list">
+        <li><a href="#showcase">Showcase</a></li>
+        <li><a href="#cuisine">Cuisine</a></li>
+        <li><a href="#book">Book</a></li>
+        <li><a href="#footer">Footer</a></li>
+      </ul>
+    </nav>
+    <div class="content-shift">
+    <section class="showcase" id="showcase">
+      <div class="carousel">
+        <img src="images/Picture1.jpg" alt="Image 1" class="carousel-image">
+        <img src="images/Picture2.jpg" alt="Image 2" class="carousel-image">
+        <img src="images/Picture3.jpg" alt="Image 3" class="carousel-image">
+      </div>
+    </section>
+
+    <section class="cuisine" id="cuisine">
+      <h2>Find what's best for you</h2>
+
+      <div class="cards">
+        <article>
+          <img
+            src="images/men_tshirt.jpg"
+            alt="A picture showing a man wearing a T-shirt"
+          />
+          <h3>Men's T-shirts</h3>
+        </article>
+
+        <article>
+          <img
+            src="images/women_cloth.jpg"
+            alt="A picture showing a woman wearing a Skirt"
+          />
+          <h3>Women's Skirts</h3>
+        </article>
+      </div>
+    </section>
+
+    <section class="cuisine book" id="book">
+      <h2>Book your stay</h2>
+
+      <div class="cards">
+        <article>
+          <img
+            src="images/store_1.jpg"
+            alt="An image showing one of the locations for physical stores"
+          />
+          <h3>Sulerere Store</h3>
+        </article>
+
+        <article>
+          <img
+            src="images/store_2.jpg"
+            alt="An image showing one of the locations for physical stores"
+          />
+          <h3>Fulani Avenue Store</h3>
+        </article>
+      </div>
+
+      <h2 style="margin-top: 2rem; text-align: center">
+        Or contact us to find the nearest location to you
+      </h2>
+    </section>
+
+    <footer class="footer" id="footer">
+      <div class="footer-inner">
+        <article>
+          <h3>Aboki Clothing Store</h3>
+        </article>
+
+        <article>
+          <ul>
+            <li><a href="#">About Aboki</a></li>
+            <li><a href="#">Fashion</a></li>
+            <li><a href="#">Size Guide</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </article>
+
+        <article>
+          <ul>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Refunds & Returns</a></li>
+            <li><a href="#">Track your order</a></li>
+          </ul>
+        </article>
+
+        <article>
+          <ul>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </article>
+
+        <article>
+          <button class="btn">Sign Me Up</button>
+        </article>
+      </div>
+    </footer>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger-menu');
+        const navList = document.querySelector('.nav-list');
+
+        hamburger.addEventListener('click', function() {
+          this.classList.toggle('active'); // Toggle active class on hamburger menu
+          navList.classList.toggle('active'); // Toggle active class on nav-list
+        });
+      });
+    </script>
+  </body>
+</html>
